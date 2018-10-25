@@ -173,10 +173,14 @@ public class ScenarioUtilImpl implements ExerciseSubmission, ScenarioUtil {
 		return nodesFromTypeC;
 	}
 
+	/**
+	 * This function returns the a unique team identifier, format: G<xx>T<yy> xx represent the group number and yy represent the team number
+	 * 
+	 * @return unique team identifier - String
+	 */
 	@Override
 	public String getTeamIdentifier() {
-	    // TODO Auto-generated method stub
-	    return null;
+	    return "G08T03";
 	}
 
 	/**
