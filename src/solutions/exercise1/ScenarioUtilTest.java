@@ -34,14 +34,14 @@ public class ScenarioUtilTest extends AbstractScenarioUtilTest implements Exerci
 		// will be given to the superior method, that called this method.
 		List<PowerLine> highVoltageLines = sut.getPowerLinesByType(graph1, PowerLineType.HIGH_VOLTAGE);
 		// Get a list of high voltage power lines
-		assertTrue("Number of high voltage lines", highVoltageLines.size()==11);
+		assertTrue("Number of high voltage lines: false", highVoltageLines.size()==11);
 		// Assert the status after the comma, if the status is not as expected, then return the string before the comma
 		List<PowerLine> lowVoltageLines = sut.getPowerLinesByType(graph1, PowerLineType.LOW_VOLTAGE);
 		// Get a map of low voltage power lines & booleans
-		assertTrue("Number of low voltage lines", lowVoltageLines.size() == 3); //fail();
+		assertTrue("Number of low voltage lines: false", lowVoltageLines.size() == 3);
 		// Assert the status after the comma, if the status is not as expected, then return the string before the comma
 		List<PowerLine> mediumVoltageLines = sut.getPowerLinesByType(graph1, PowerLineType.MEDIUM_VOLTAGE);
-		assertTrue("Number of medium voltage lines", mediumVoltageLines.size()==4);
+		assertTrue("Number of medium voltage lines: false", mediumVoltageLines.size()==4);
 		// Assert the status after the comma, if the status is not as expected, then return the string before the comma
 	}
 	
@@ -88,7 +88,7 @@ public class ScenarioUtilTest extends AbstractScenarioUtilTest implements Exerci
 			// If this point is reached, the test will fail!
 		} catch (IllegalArgumentException e) {
 			// The keyword catch marks a block in which the exception is going to be handled
-			
+			fail("IllegalArgumentException thrown.");
 		}
 	}
 
@@ -97,7 +97,7 @@ public class ScenarioUtilTest extends AbstractScenarioUtilTest implements Exerci
 		System.out.println("Test getControllableProducers");
 		List <ControllableProducer> controllableProducer = sut.getControllableProducers(graph1);
 		//get list of controllable producer
-		assertTrue("Number of controllable producer", controllableProducer.size()== 4);    
+		assertTrue("Number of controllable producer: false", controllableProducer.size()== 4);    
 	}
 
 	@Test
@@ -114,7 +114,7 @@ public class ScenarioUtilTest extends AbstractScenarioUtilTest implements Exerci
 	    	//fail("no IllegalArgumentException thrown.")
 	    	
 	    } catch (IllegalArgumentException e) {
-	    	
+	    	fail();
 	    }
 	    
 	}
@@ -124,7 +124,7 @@ public class ScenarioUtilTest extends AbstractScenarioUtilTest implements Exerci
 		System.out.println("Test getControllableConsumers");
 		List <ControllableConsumer> controllableConsumer = sut.getControllableConsumers(graph1);
 		//get list of controllable consumer
-		assertTrue("Number of controllable consumer", controllableConsumer.size()== 3);	    
+		assertTrue("Number of controllable consumer: false", controllableConsumer.size()== 3);	    
 	}
 
 	@Test
@@ -151,7 +151,7 @@ public class ScenarioUtilTest extends AbstractScenarioUtilTest implements Exerci
 		System.out.println("Test getProducers");
 	    List<Producer> producer = sut.getProducers(graph1);
 	    //get list of producer
-	    assertTrue("Number of producer", producer.size()==10);
+	    assertTrue("Number of producer: false", producer.size()==10);
 	}
 
 	@Test
@@ -177,7 +177,7 @@ public class ScenarioUtilTest extends AbstractScenarioUtilTest implements Exerci
 		System.out.println("Test getConsumers");
 	    List <Consumer> consumer = sut.getConsumers(graph1);
 	    //get list of consumer
-	    assertTrue("Number of consumer", consumer.size() == 8); 
+	    assertTrue("Number of consumer: false", consumer.size() == 8); 
 	}
 
 	@Test

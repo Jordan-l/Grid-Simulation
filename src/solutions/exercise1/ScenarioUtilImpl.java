@@ -31,7 +31,7 @@ public class ScenarioUtilImpl implements ExerciseSubmission, ScenarioUtil {
 	 * 			Type of the searching landscape (beach, sea, mountain, grass, river)
 	 * 
 	 * @param scenario
-	 * 			Is the data type of the game. Each scenario contains a play field, a land model,
+	 * 			Is the data type of the game. Each scenario contains a play field with EnergyNodes and land model,
 	 * 			
 	 * @return 	List with all elements of the searched type
 	 */
@@ -85,7 +85,7 @@ public class ScenarioUtilImpl implements ExerciseSubmission, ScenarioUtil {
 	    	EnergyNode eNode = i.next();
 	    	
 	    	if(eNode instanceof ControllableProducer) {
-	    		nodesFromTypeCP.add((ControllableProducer) eNode); // hier noch ein Fehler? JUnit Test liefert true zurück...
+	    		nodesFromTypeCP.add((ControllableProducer) eNode);
 	    	}
 	    }
 	    return nodesFromTypeCP;
@@ -114,7 +114,7 @@ public class ScenarioUtilImpl implements ExerciseSubmission, ScenarioUtil {
 	    	EnergyNode eNode = i.next();
 	    	
 	    	if(eNode instanceof ControllableConsumer) {
-	    		nodesFromTypeCC.add((ControllableConsumer) eNode); // hier noch ein Fehler? JUnit Test liefert true zurück...
+	    		nodesFromTypeCC.add((ControllableConsumer) eNode);
 	    	}
 	    }
 		return nodesFromTypeCC;
@@ -140,7 +140,7 @@ public class ScenarioUtilImpl implements ExerciseSubmission, ScenarioUtil {
 	    	EnergyNode eNode = i.next();
 	    	
 	    	if(eNode instanceof Producer) {
-	    		nodesFromTypeP.add((Producer) eNode); // hier noch ein Fehler? JUnit Test liefert true zurück...
+	    		nodesFromTypeP.add((Producer) eNode);
 	    	}
 	    }
 		return nodesFromTypeP;
@@ -167,7 +167,7 @@ public class ScenarioUtilImpl implements ExerciseSubmission, ScenarioUtil {
 	    	EnergyNode eNode = i.next();
 	    	
 	    	if(eNode instanceof Consumer) {
-	    		nodesFromTypeC.add((Consumer) eNode); // hier noch ein Fehler? JUnit Test liefert true zurück...
+	    		nodesFromTypeC.add((Consumer) eNode);
 	    	}
 	    }
 		return nodesFromTypeC;
@@ -215,3 +215,12 @@ public class ScenarioUtilImpl implements ExerciseSubmission, ScenarioUtil {
 
 	
 }
+
+
+/**
+ * Fragen:
+ * 
+ * 1) muss für die Methode getPlayfieldElementsByType eine Test-Methode implementiert werden, wenn ja was ist das Scenario.
+ * 
+ * 2) muss bei den Test methoden eine throws Exception declaration (an Methodenkopf) angehänt werden ? wenn ja , was macht die (unterscied zu ohne). 
+ */

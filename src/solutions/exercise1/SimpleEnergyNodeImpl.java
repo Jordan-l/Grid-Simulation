@@ -12,12 +12,22 @@ import org.sopra.api.exercises.exercise1.SimpleEnergyNode;
  * @version 1.0.0
  */
 abstract class SimpleEnergyNodeImpl implements SimpleEnergyNode, ExerciseSubmission{
-
+	
+	/**
+	 * x-coordinate of the EnergyNode
+	 */
 	final private int x;
 	
+	/**
+	 * y-coordinate of the EnergyNode
+	 */
 	final private int y; 
 	
+	/**
+	 * energy level of the EnergyNode
+	 */
 	protected int energyLevel;
+	
 	/**
 	 * Constructor
 	 * 
@@ -47,8 +57,8 @@ abstract class SimpleEnergyNodeImpl implements SimpleEnergyNode, ExerciseSubmiss
 	 * @return "EnergyNode" - String
 	 */
 	@Override
-	public String getName() {	//funktion ist im Interface exercise.exercise1.SimpleEnergyNode beschrieben
-		return "EnergyNode"; //ist das so richtig?
+	public String getName() {
+		return "EnergyNode";
 	}
 	/**
 	 * Get the x-coordinate of the EnergyNode (Getter Method)

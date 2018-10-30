@@ -26,14 +26,24 @@ public class SimpleSolarPowerPlantImpl extends SimpleEnergyNodeImpl implements S
 	/**
 	 * Get the producer name (Getter Method)
 	 * 
-	 * @return x- and y-coordinate of the SolarPowerPlant and the String "SolarPowerPlant"
+	 * @return value of the super type method and the String "SolarPowerPlant"
 	 */
 	@Override
-	public String getProducerName() {	//funktion ist im interface exercise.exercise1.SimpleProducer beschrieben
-		int x = super.getXPos();
-		int y = super.getYPos();
+	public String getProducerName() {
+		String superName = super.getName();
+		String nameString = superName + " : SolarPowerPlant";
 		
-		return x+" "+y+" : SolarPowerPlant";		//ist das so gemeint ? siehe docs / Aufgabenstellung
+		return nameString;
+	}
+	
+	/**
+	 * This function returns the a unique team identifier, format: G<xx>T<yy> xx represent the group number and yy represent the team number
+	 * 
+	 * @return unique team identifier - String
+	 */
+	@Override
+	public String getTeamIdentifier() {
+		return "G08T03";
 	}
 	
 	
